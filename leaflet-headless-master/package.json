@@ -1,0 +1,39 @@
+{
+  "name": "gh-leaflet-headless",
+  "version": "0.3.0",
+  "description": "Leaflet that runs server-side with node",
+  "main": "index.js",
+  "browser": "browser.js",
+  "scripts": {
+    "lint": "eslint index.js src/* examples/*/index.js",
+    "test": "mocha -t 60000 -R spec test/test.js && npm run lint",
+    "start": "index.js",
+    "release": "mversion patch -m",
+    "release-minor": "mversion minor -m"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:georgehardy/leaflet-headless.git"
+  },
+  "author": "Jan Pieter Waagmeester <jieter@jieter.nl>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "canvas": "^2.10.2",
+    "jsdom": "^20.0.3",
+    "leaflet": "^1.4.0",
+    "leaflet-image": "^0.4.0",
+    "node-leaflet-image": "^0.4.3",
+    "request": "^2.65.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-leaflet": "0.0.12",
+    "eslint": "^8.29.0",
+    "mapbox.js": "^3.0.1",
+    "mocha": "^10.1.0",
+    "mversion": "^2.0.1",
+    "pixelmatch": "^4.0.2",
+    "pngjs": "3.3.3"
+  }
+}
